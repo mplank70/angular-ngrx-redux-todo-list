@@ -7,9 +7,11 @@ import { HelloComponent } from './hello.component';
 import { TodosComponent } from './pages/todos/todos.component';
 import { TodoListComponent } from './pages/todos/todo-list/todo-list.component';
 import { TodoFormComponent } from './pages/todos/todo-form/todo-form.component';
+import { StoreModule } from '@ngrx/store';
+import { store } from './stores/todos/todos.store';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, StoreModule.forRoot(store) ],
   declarations: [ AppComponent, HelloComponent, TodosComponent, TodoListComponent, TodoFormComponent ],
   bootstrap:    [ AppComponent ]
 })
