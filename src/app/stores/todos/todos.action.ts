@@ -16,5 +16,24 @@ export class TodosActions {
     }
   }
 
-  
+  toggleTodo(id) {
+    return {
+      type: TOGGLE_TODO,
+      id: id
+    }
+  }
+
+  removeTodo(id) {
+    return {
+      type: REMOVE_TODO,
+      id: id
+    }
+  }
+
+  setCurrentFilter(filter) {
+    return {
+      type: SET_CURRENT_FILTER,
+      filter: filter
+    }
+  }
 }
