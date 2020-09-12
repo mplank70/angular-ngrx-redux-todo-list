@@ -9,10 +9,12 @@ import { TodoListComponent } from './pages/todos/todo-list/todo-list.component';
 import { TodoFormComponent } from './pages/todos/todo-form/todo-form.component';
 import { StoreModule } from '@ngrx/store';
 import { store } from './stores/todos/todos.store';
+import { TodosActions } from './stores/todos/todos.action';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, StoreModule.forRoot(store) ],
   declarations: [ AppComponent, HelloComponent, TodosComponent, TodoListComponent, TodoFormComponent ],
+  providers: [ TodosActions ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

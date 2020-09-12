@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { ITodoRootState } from '../../stores/todos/todos.store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todos',
@@ -6,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todos.component.scss']
 })
 export class TodosComponent implements OnInit {
+  todos$: Observable<any[]>;
 
-  constructor() { }
+  constructor(public store: Store<ITodoRootState>) { 
+    
+
+  }
 
   ngOnInit() {
   }
