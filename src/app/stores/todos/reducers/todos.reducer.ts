@@ -6,6 +6,16 @@ const initialState = {
 
 export function todoReducer(state = initialState, action){
   switch(action.type){
-    case TodosActions
+    case TodosActions.ADD_TODO:
+      return {
+        todos: state.todos.concat({
+          id: action.id,
+          text: action.text,
+          completed: action.completed
+        }),
+        currentFilter: state.currentFilter
+      };
+    default:
+        return state;
   }
 }
