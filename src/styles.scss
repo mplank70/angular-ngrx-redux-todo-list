@@ -1,2 +1,23 @@
 /* Add application styles & imports to this file! */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+*:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.input-group{
+  .btn{
+    &.btn-outline-secondary{
+      border-color: #ced4da !important;
+      padding: .14rem .5rem;
+    }
+  }
+  .input-group-append{
+     .btn{
+    &.btn-outline-secondary{
+      border-left: none !important;
+    }
+  }
+  }
+}
